@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        body{
+            background: blue;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        
+        .divi{
+            padding: 20px;
+            /* border: 2px solid; */
+            background:rgb(189, 192, 191);
+            text-align: center;
+            border-radius: 8px;
+            
+           
+            
+        }
+        #btn{
+            height:30px;
+            width:40vh;
+            color: white;
+            background-color: black;
+            border-radius:10px ;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="outer">
+        <div class="divi">
+            <h1 id="sara">color code</h1>
+            <button id="btn">Click To Change</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('btn').addEventListener('click',myfun);
+
+        function myfun(){
+
+            let number =Math.floor(Math.random()*16777215);
+            let newnum = "#"+number.toString(16);
+            console.log(newnum);
+           document.getElementById('outer').style.backgroundColor=newnum;
+        }
+    </script>
+
+    
+</body>
+</html>
